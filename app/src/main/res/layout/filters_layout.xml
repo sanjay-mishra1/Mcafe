@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relative_filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="65dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/filter_not"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters are not avalable for " />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Filtertitle"
+            android:layout_toEndOf="@id/titleImg"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/titleImg"
+             android:text="Show All" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/titleImg"
+            android:layout_toEndOf="@id/filter_not"
+            android:layout_toRightOf="@id/filter_not"
+            android:src="@drawable/all_included"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filter_not"
+            android:text="Select a food type to filter the food items " />
+    </RelativeLayout>
+     <LinearLayout
+        android:id="@+id/sort_none"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="10dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/sort_none" />
+
+         <TextView
+
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginEnd="2dp"
+             android:layout_marginRight="2dp"
+             android:drawablePadding="50dp"
+             android:gravity="center"
+             android:paddingBottom="10dp"
+             android:paddingEnd="16dp"
+             android:paddingRight="16dp"
+             android:paddingTop="10dp"
+             android:text="Sort None          "
+             android:textColor="#000"
+             android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/none_tick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_check_black_24dp"
+        android:tint="#ff00ddff"
+        android:visibility="invisible" />
+    </LinearLayout>
+     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Price_high_low"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+             android:src="@drawable/sort_price"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:drawablePadding="50dp"
+            android:gravity="left|start"
+            android:paddingBottom="16dp"
+            android:paddingEnd="16dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text=" Price : Low to High"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:paddingRight="16dp" />
+
+            <ImageView
+                android:id="@+id/high_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+
+                android:visibility="invisible" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Price_low_high"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/sort_price" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:drawablePadding="50dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:text="Price : Low to High  "
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/low_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_black_24dp"
+            android:tint="#ff00ddff"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Customer_reviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:tint="#ff00ddff"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/sort_reviews" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:drawablePadding="50dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="10dp"
+            android:text="Customer Reviews"
+            android:textColor="#000"
+            android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/review_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+                android:visibility="invisible" />
+    </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/most_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:tint="#ff00ddff"
+
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/full_star" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:drawablePadding="50dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:text="Most Rating          "
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/rating_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+                android:visibility="invisible" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/most_ordered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:tint="#ff00ddff"
+            android:layout_gravity="center_vertical"
+            android:layout_height="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/cart" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:drawablePadding="50dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text=" Most Ordered        "
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/order_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+                android:visibility="invisible" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/most_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:tint="#ff00ddff"
+            android:src="@drawable/sort_favorite" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:drawablePadding="50dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:text="Most Favorite        "
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/favorite_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+                android:visibility="invisible" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

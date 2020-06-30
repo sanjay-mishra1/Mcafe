@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/food_items_relative"
+    android:layout_width="wrap_content"
+    android:clickable="true"
+     android:layout_height="30dp"
+    android:background="@drawable/state_food_items"
+    android:focusable="true"
+     android:paddingTop="1dp"
+  >
+        <ImageView
+            android:id="@+id/food_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+              android:paddingLeft="8dp"
+            android:tint="#fff"
+            android:src="@drawable/ic_add_shopping_cart_black_24dp"
+            android:layout_marginEnd="5dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/food_icon"
+            android:drawableRight="@drawable/button_not_pressed"
+            android:paddingTop="2dp"
+            android:text="Cart"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/food_icon"
+            android:drawableEnd="@drawable/arrow_fill_drop_down" />
+
+
+
+
+    <!--
+    <Button
+        android:id="@+id/food_type"
+        android:layout_width="130dp"
+        android:layout_below="@id/relative"
+        android:layout_height="30dp"
+        android:background="@drawable/state_food_items"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="Cake"
+        android:textAllCaps="false"
+         android:textColor="#fff"
+        android:textSize="18sp"
+        android:drawablePadding="-41dp"
+        android:drawableRight="@drawable/arrow_fill_drop_down"
+        android:drawableEnd="@drawable/arrow_fill_drop_down" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/cake"
+        android:elevation="2dp" />
+-->
+</RelativeLayout>

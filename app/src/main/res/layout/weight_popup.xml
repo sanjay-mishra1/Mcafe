@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background">
+
+ <com.google.android.material.appbar.AppBarLayout
+     android:id="@+id/appbar"
+     android:layout_alignParentTop="true"
+     android:layout_width="match_parent"
+     android:layout_height="50dp"
+     android:background="#fff">
+
+  <androidx.appcompat.widget.Toolbar
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:background="#fff">
+
+    <ImageView
+        android:id="@+id/backpopupweight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:src="@drawable/back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/backpopupweight"
+        android:layout_toRightOf="@+id/backpopupweight"
+        android:text="Select Variant"
+        android:textColor="#000"
+        android:textSize="18sp" />
+   </RelativeLayout>
+  </androidx.appcompat.widget.Toolbar>
+ </com.google.android.material.appbar.AppBarLayout>
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:layout_below="@+id/appbar">
+
+  <RelativeLayout
+      android:id="@+id/relative1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+       android:layout_marginTop="8dp"
+      android:minHeight="100dp"
+
+      android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+   <RadioButton
+       android:id="@+id/gm200Popup"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+       android:layout_alignBaseline="@+id/cakeName"
+       android:layout_alignBottom="@+id/cakeName"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:buttonTint="@android:color/holo_blue_bright" />
+
+   <ImageView
+       android:id="@+id/cakeImage1"
+       android:layout_width="120dp"
+       android:layout_height="83dp"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:layout_marginEnd="7dp"
+       android:layout_marginRight="14dp"
+
+       android:layout_toEndOf="@+id/cakeName"
+       android:layout_toRightOf="@+id/cakeName"
+       android:src="@drawable/mainlogo" />
+
+   <TextView
+       android:id="@+id/cakeName"
+       android:layout_width="170dp"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/cakeweight"
+       android:layout_alignStart="@+id/cakeweight"
+       android:layout_below="@+id/cakeweight"
+       android:text="Pineapple Cake small (200gm)" />
+
+   <TextView
+       android:id="@+id/cakeweight"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="12dp"
+       android:layout_marginStart="12dp"
+       android:layout_toEndOf="@+id/gm200Popup"
+       android:layout_toRightOf="@+id/gm200Popup"
+       android:text="200 gm"
+       android:textColor="#000" />
+
+   <TextView
+       android:id="@+id/cakeprice"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/cakeweight"
+       android:layout_alignStart="@+id/cakeweight"
+       android:layout_below="@+id/cakeName"
+       android:text="₹ 499"
+       android:textColor="@android:color/holo_red_light" />
+
+   <TextView
+       android:id="@+id/cakeoriginalPrice"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/cakeprice"
+       android:layout_alignBottom="@+id/cakeprice"
+       android:layout_toEndOf="@+id/cakeweight"
+       android:layout_toRightOf="@+id/cakeweight"
+       android:text="₹ 599" />
+
+   <TextView
+       android:id="@+id/cakediscount"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/cakeoriginalPrice"
+       android:layout_alignBottom="@+id/cakeoriginalPrice"
+       android:layout_marginLeft="8dp"
+       android:layout_marginStart="8dp"
+       android:layout_toEndOf="@+id/cakeoriginalPrice"
+       android:layout_toRightOf="@+id/cakeoriginalPrice"
+       android:textColor="@color/colorAccent"
+       android:visibility="visible" />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/relative2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="100dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/relative1"
+      android:layout_marginTop="15dp"
+      android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+   <RadioButton
+       android:id="@+id/gm500popup"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+       android:layout_alignBaseline="@+id/cakeName2"
+       android:layout_alignBottom="@+id/cakeName2"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:buttonTint="@android:color/holo_blue_bright" />
+
+   <ImageView
+       android:id="@+id/cakeImage2"
+       android:layout_width="120dp"
+       android:layout_height="83dp"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:layout_marginEnd="7dp"
+       android:layout_marginRight="14dp"
+       android:layout_toEndOf="@+id/cakeName2"
+       android:layout_toRightOf="@+id/cakeName2"
+       android:src="@drawable/mainlogo" />
+
+   <TextView
+       android:id="@+id/cakeName2"
+       android:layout_width="170dp"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/cakeprice2"
+       android:layout_alignStart="@+id/cakeprice2"
+       android:layout_below="@+id/cakeweight2"
+       android:text="Pineapple Cake Half  kg ddddddd " />
+
+   <TextView
+       android:id="@+id/cakeweight2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="12dp"
+       android:layout_marginStart="12dp"
+       android:layout_toEndOf="@+id/gm500popup"
+       android:layout_toRightOf="@+id/gm500popup"
+       android:text="1/2 kg"
+       android:textColor="#000" />
+
+   <TextView
+       android:id="@+id/cakeprice2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/cakeweight2"
+       android:layout_alignStart="@+id/cakeweight2"
+       android:layout_below="@+id/cakeName2"
+       android:text="₹ 499"
+       android:textColor="@android:color/holo_red_light" />
+
+   <TextView
+       android:id="@+id/cakeoriginalPrice2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/cakeprice2"
+       android:layout_alignBottom="@+id/cakeprice2"
+       android:layout_toEndOf="@+id/cakeweight2"
+       android:layout_toRightOf="@+id/cakeweight2"
+       android:text=" " />
+
+   <TextView
+       android:id="@+id/cakediscount2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/cakeName2"
+       android:layout_marginLeft="7dp"
+       android:layout_marginStart="7dp"
+       android:layout_toEndOf="@+id/cakeoriginalPrice2"
+       android:layout_toRightOf="@+id/cakeoriginalPrice2"
+       android:text=" "
+       android:textColor="@color/colorAccent" />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/relative3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="100dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/relative2"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+   <RadioButton
+       android:id="@+id/gm1000Popup"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+       android:layout_alignBaseline="@+id/cakeName3"
+       android:layout_alignBottom="@+id/cakeName3"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentStart="true"
+       android:buttonTint="@android:color/holo_blue_bright" />
+
+   <ImageView
+       android:id="@+id/cakeImage3"
+       android:layout_width="120dp"
+       android:layout_height="83dp"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+       android:layout_marginEnd="7dp"
+       android:layout_marginRight="14dp"
+       android:layout_toEndOf="@+id/cakeName3"
+       android:layout_toRightOf="@+id/cakeName3"
+       android:src="@drawable/mainlogo" />
+
+   <TextView
+       android:id="@+id/cakeName3"
+       android:layout_width="170dp"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/cakeweight3"
+       android:layout_alignStart="@+id/cakeweight3"
+       android:layout_below="@+id/cakeweight3"
+       android:text="Pineapple Cake Half 1 kg" />
+
+   <TextView
+       android:id="@+id/cakeweight3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_marginLeft="12dp"
+       android:layout_marginStart="12dp"
+       android:layout_toEndOf="@+id/gm1000Popup"
+       android:layout_toRightOf="@+id/gm1000Popup"
+       android:text="1 kg"
+       android:textColor="#000" />
+
+   <TextView
+       android:id="@+id/cakeprice3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/cakeweight3"
+       android:layout_alignStart="@+id/cakeweight3"
+       android:layout_below="@+id/cakeName3"
+       android:text="₹ 499 "
+       android:textColor="@android:color/holo_red_light" />
+
+   <TextView
+       android:id="@+id/cakeoriginalPrice3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/cakeName3"
+       android:layout_marginLeft="8dp"
+       android:layout_marginStart="8dp"
+       android:layout_toEndOf="@+id/cakeprice3"
+       android:layout_toRightOf="@+id/cakeprice3"
+       android:text=" " />
+
+   <TextView
+       android:id="@+id/cakediscount3"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignBaseline="@+id/cakeoriginalPrice3"
+       android:layout_alignBottom="@+id/cakeoriginalPrice3"
+       android:layout_marginLeft="7dp"
+       android:layout_marginStart="7dp"
+       android:layout_toEndOf="@+id/cakeoriginalPrice3"
+       android:layout_toRightOf="@+id/cakeoriginalPrice3"
+       android:text=" "
+       android:textColor="@color/colorAccent" />
+  </RelativeLayout>
+
+ </LinearLayout>
+
+</RelativeLayout>

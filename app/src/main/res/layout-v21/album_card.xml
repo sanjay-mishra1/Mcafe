@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/album_cardView"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="wrap_content"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:elevation="3dp"
+        android:background="@drawable/rounded_button_transparent"
+         card_view:cardCornerRadius="@dimen/card_album_radius"
+     >
+
+        <RelativeLayout
+            android:id="@+id/color"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                 android:clickable="true"
+                android:transitionName="My_Animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/add_to_cart"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thumbnail"
+                android:layout_toStartOf="@id/overflow"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                android:paddingTop="@dimen/album_title_padding"
+                android:textColor="@color/album_title"
+                android:textSize="@dimen/album_title"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/CakePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/title"
+                 android:layout_marginStart="10dp"
+                android:textColor="#000"
+                android:textSize="18sp"
+                  />
+
+            <TextView
+                android:id="@+id/Desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="33dp"
+                android:paddingBottom="@dimen/songs_count_padding_bottom"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                 android:textSize="@dimen/songs_count"
+                 />
+
+            <TextView
+                android:id="@+id/cakeoriginalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="10dp"
+                android:gravity="center_horizontal"
+                 />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_alignParentStart="true"
+                android:layout_below="@+id/title"
+                 android:layout_marginStart="36dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="@dimen/songs_count_padding_bottom"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                android:textColor="#000"
+                android:textSize="18sp"
+                 />
+
+
+            <ImageView
+                android:id="@+id/overflow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:layout_alignParentEnd="true"
+                 android:layout_below="@+id/thumbnail"
+                android:scaleType="centerCrop"
+                android:src="@drawable/info"
+                android:contentDescription="@string/more_ino" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

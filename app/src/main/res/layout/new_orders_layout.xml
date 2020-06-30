@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
+
+        <RelativeLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+            <TextView
+                android:id="@+id/Orderstatus1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/statusbackground"
+                android:gravity="center_horizontal"
+                android:text="Pending"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/o"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_alignEnd="@+id/pay2"
+                android:layout_alignRight="@+id/pay2"
+                android:layout_below="@+id/Orderstatus1"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:gravity="top|left|center_vertical"
+                android:text="Order"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/orderno1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/o"
+                android:layout_alignBottom="@+id/o"
+                android:layout_marginLeft="150dp"
+                android:layout_marginStart="110dp"
+                android:text="12345678"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/d1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/orderno1"
+                android:layout_marginTop="5dp"
+                android:text="  Delivery"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/deliverytime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/orderno1"
+                android:layout_alignStart="@+id/orderno1"
+                android:layout_below="@+id/orderno1"
+                android:layout_marginTop="5dp"
+                android:text="jun 3, 2018 12:02:00567"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/p"
+                android:layout_marginTop="8dp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+
+                android:layout_alignTop="@+id/img1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img1"
+                android:layout_toRightOf="@+id/img1"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignTop="@+id/img2"
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/img2"
+                android:layout_toRightOf="@+id/img2"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignTop="@+id/img3"
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/img3"
+                android:layout_toRightOf="@+id/img3"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img4"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/img4"
+                android:layout_toRightOf="@+id/PaymentStatus1"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/deliverytime"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                android:text="Payment"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/PaymentStatus1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/p"
+                android:layout_alignBottom="@+id/p"
+                android:layout_alignLeft="@+id/deliverytime"
+                android:layout_alignStart="@+id/deliverytime"
+                android:text="4454"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/p"
+                android:layout_alignBottom="@+id/p"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="5dp"
+                android:text="@string/remaining_"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

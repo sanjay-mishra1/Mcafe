@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sanproject.mcafe">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"> </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <application
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:testOnly="false"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <!--        tools:overrideLibrary="com.payumoney.sdkui"-->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_MbBQZDEe2URj00"/>
+
+        <activity android:name=".Touch.splashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".logIN"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".gallery.GallerySample"/>
+        <activity android:name=".message.help_activity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".firebase.Message_Image"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".final_food_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".college_change_avtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".change_account_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Final_Food_selelction"
+            android:screenOrientation="portrait" />
+        <activity android:name=".editOrder"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".food_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/Feedback_dialog"
+            >
+        </activity>
+        <activity android:name=".payment_wallets.paytm_payments"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".orderFood"
+            android:label="CHECKOUT"
+            android:parentActivityName=".Final_Food_selelction"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanjay.tabcard.MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+<!--        <provider-->
+<!--            android:name="com.squareup.picasso.PicassoProvider"-->
+<!--            android:authorities="com.example.sanjay.tabcard.com.squareup.picasso"-->
+<!--            android:exported="false" />-->
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".payment"/>
+        <activity android:name=".orderstatus"
+            android:screenOrientation="portrait"
+            />
+
+
+        <activity android:name=".newlogin"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".cakeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/rating_bar"
+            />
+        <activity android:name=".cakeDetailView"
+            android:theme="@style/rating_bar"
+
+            android:screenOrientation="portrait"/>
+        <activity android:name=".carts.cartFragments"
+            android:theme="@style/AppTheme_cart"
+
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|keyboard"/>
+        <activity android:name=".message.imageViewer"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Touch.image_zoomer"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".SentFragment"
+            android:screenOrientation="portrait"
+            android:theme="@style/Feedback_dialog"
+            android:excludeFromRecents="true"
+            />
+        <activity android:name=".food_items.food_type_filter"
+            android:theme="@style/Feedback_dialog"
+            android:screenOrientation="portrait"
+
+            />
+        <activity android:name=".notification.notification_view"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".notification.notification_dialog"
+            android:excludeFromRecents="true"
+            android:theme="@style/Feedback_dialog"
+            />
+        <activity android:name=".update.update"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".order.order"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".account_settings"
+            android:screenOrientation="portrait"
+            android:label="Settings"
+
+
+            />
+        <activity android:name=".selectcanteen" />
+        <activity android:name=".update.webview" />
+        <activity android:name=".payment_wallets.PayUWalletActivity" />
+        <activity android:name=".payment_wallets.RazorpayPayment" />
+    </application>
+
+
+
+
+<!--    <application-->
+<!--        android:allowBackup="true"-->
+<!--        android:icon="@mipmap/ic_launcher"-->
+<!--        android:label="@string/app_name"-->
+<!--        android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--        android:supportsRtl="true"-->
+<!--        android:theme="@style/AppTheme">-->
+<!--        <activity android:name=".MainActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--    </application>-->
+
+</manifest>

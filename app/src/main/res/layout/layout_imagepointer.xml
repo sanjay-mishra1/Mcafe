@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="#00ffffff"
+    tools:showIn="@layout/detail_viewofthe_cake"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="wrap_content"
+     android:id="@+id/pointer1"
+
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+             android:src="@drawable/imagepointer"
+         />
+    <ImageView
+        android:id="@+id/pointer1_blue"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:tint="#ff0092f4"
+        android:src="@drawable/imagepointer"
+        android:visibility="visible" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer2"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+         />
+        <ImageView
+            android:id="@+id/pointer2_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer3"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+          />
+        <ImageView
+            android:id="@+id/pointer3_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer4"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+           />
+        <ImageView
+            android:id="@+id/pointer4_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer5"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+           />
+        <ImageView
+            android:id="@+id/pointer5_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer6"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+           />
+        <ImageView
+            android:id="@+id/pointer6_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer7"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+         />
+        <ImageView
+            android:id="@+id/pointer7_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer8"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+            />
+        <ImageView
+            android:id="@+id/pointer8_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer9"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+           />
+        <ImageView
+            android:id="@+id/pointer9_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer10"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+              />
+        <ImageView
+            android:id="@+id/pointer10_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pointer11"
+
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+
+            android:src="@drawable/imagepointer"
+          />
+        <ImageView
+            android:id="@+id/pointer11_blue"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:tint="#ff0092f4"
+            android:src="@drawable/imagepointer"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

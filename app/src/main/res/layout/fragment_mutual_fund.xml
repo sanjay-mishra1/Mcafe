@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_final__food_selelction"
+    tools:context=".Final_Food_selelction"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/total_price1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#03f5d5"
+        android:text="Total" />
+
+    <Button
+        android:id="@+id/am"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/times"
+        android:layout_toEndOf="@+id/times"
+        android:layout_toRightOf="@+id/times"
+        android:background="#03f5d5"
+        android:text="AM" />
+    <Button
+        android:id="@+id/pm1"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/total_price1"
+        android:layout_toEndOf="@+id/times"
+        android:layout_toRightOf="@+id/times"
+        android:background="#03f5d5"
+        android:text="PM" />
+    <EditText
+        android:id="@+id/times"
+        android:background="#2e0505"
+        android:inputType="time"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/total_price1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:hint="Time"
+        android:textColorHint="@color/colorPrimary"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relateDate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="22/7/18"
+                android:visibility="visible" />
+        </RelativeLayout>
+    <include layout="@layout/item_message_received"
+            android:layout_below="@+id/relateDate"
+
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/layout_message_received"
+        />
+    <include layout="@layout/item_message_sent"
+        android:layout_below="@+id/relateDate"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/layout_message_sent"
+        android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

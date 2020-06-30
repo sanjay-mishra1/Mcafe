@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/cardview_dark_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="#fff">
+
+                <ImageView
+                    android:id="@+id/backpopupweight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/backpopupweight"
+                    android:layout_toRightOf="@+id/backpopupweight"
+                    android:text="Select Delivery Time"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_below="@+id/appbar"
+    android:layout_height="match_parent">
+
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+
+     android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_centerInParent="true"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+         android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+
+            android:layout_height="2dp"
+            android:layout_below="@id/LunchTimeMainRelative"
+            android:background="@color/lightgray" />
+        <RelativeLayout
+            android:id="@+id/LunchTimeMainRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/OtherPayment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:drawableRight="@drawable/back_blue"
+                android:gravity="left|center"
+                android:text="Lunch Time"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/back_blue" />
+
+            <RelativeLayout
+                android:id="@+id/lunchtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/OtherPayment"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Select Lunch Time" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_marginLeft="34dp"
+                    android:id="@+id/radioGroupLunch"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="25dp"
+                    android:paddingLeft="18dp"
+                    android:paddingStart="18dp">
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupLunch_fromLunch11"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="22dp"
+                        android:text="11:50 AM"
+                        android:textSize="18sp"
+                        android:paddingRight="0dp" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                         android:id="@+id/radioGroupLunch_fromLunch12"
+                        android:layout_height="40dp"
+                         android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                         android:paddingEnd="0dp"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="12:50 PM"
+                        android:textSize="18sp"
+                        android:paddingRight="0dp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+
+            android:layout_height="2dp"
+            android:layout_below="@id/MainRelativeToday"
+            android:background="@color/lightgray" />
+
+        <RelativeLayout
+            android:id="@+id/MainRelativeToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/TodayText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:drawableRight="@drawable/back_blue"
+                android:gravity="left|center"
+
+                android:text="Today"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/back_blue" />
+
+            <RelativeLayout
+                android:id="@+id/todayRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TodayText"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textview31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Select Time Slot"
+                    android:textColor="#000" />
+
+
+                <RadioGroup
+                    android:id="@+id/RadioGroupToday"
+                    android:layout_below="@+id/textview31"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp">
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from9to10"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                         android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingStart="22dp"
+                        android:text="9:00 - 10:00 Hrs"
+                        android:textSize="20sp"
+                        android:visibility="visible"
+                       />
+
+                    <View
+                        android:id="@+id/to_views1"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from10to11"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="40dp"
+                         android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                         android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="10:00 - 11:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/to_views2"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from11to12"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginBottom="7dp"
+                        android:background="#fff"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                         android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="11:00 - 12:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/to_views3"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from12to1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginBottom="8dp"
+                        android:background="#fff"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                         android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="12:00 - 13:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/to_views4"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from1to2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                          android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="13:00 - 14:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/to_views5"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/RadioGroupTomorrow_from1to2"
+                        android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from2to3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                         android:background="#fff"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                         android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="14:00 - 15:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/to_views6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupToday_from3to4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                         android:layout_marginTop="8dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="15:00 - 15:30 Hrs"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+        </RelativeLayout>
+<!--
+        <view
+            android:id="@+id/views2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relatives2" />
+-->
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+
+            android:layout_height="2dp"
+            android:layout_below="@id/MainRelativeTom"
+            android:background="@color/lightgray" />
+        <RelativeLayout
+            android:id="@+id/MainRelativeTom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/TomorrowText"
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:drawableRight="@drawable/back_blue"
+                android:gravity="left|center"
+                android:text="Tomorrow"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/back_blue" />
+
+            <RelativeLayout
+                android:id="@+id/tommorrowRelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TomorrowText"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textview41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Select Time Slot"
+                    android:textColor="#000" />
+
+
+                <RadioGroup
+                    android:id="@+id/RadioGroupTomorrow"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/textview41"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginStart="34dp">
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from9to10"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="40dp"
+                         android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="9:00 - 10:00 Hrs"
+                        android:textSize="20sp"
+                        android:visibility="visible" />
+
+                    <View
+                        android:id="@+id/views1"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from10to11"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="40dp"
+                         android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="10:00 - 11:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/views2"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from11to12"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginBottom="7dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="11:00 - 12:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/views3"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from12to1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginBottom="8dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="12:00 - 13:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/views4"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from1to2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                         android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="13:00 - 14:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/views5"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from2to3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                         android:background="#fff"
+
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="14:00 - 15:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/views6"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupTomorrow_from3to4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                         android:layout_marginTop="8dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="15:00 - 15:30 Hrs"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <!--
+                <view
+                    android:id="@+id/views3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/relatives3"
+                    android:background="@color/lightgray" />
+-->
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+
+            android:layout_height="2dp"
+            android:layout_below="@id/MainRelativethird"
+            android:background="@color/lightgray" />
+                <RelativeLayout
+                    android:id="@+id/MainRelativethird"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+
+                    android:background="#fff">
+
+                    <TextView
+                        android:id="@+id/ThirdDayText"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="40dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:drawableRight="@drawable/back_blue"
+                        android:gravity="left|center"
+                        android:text="Wednesday"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+                        android:drawableEnd="@drawable/back_blue" />
+
+                    <RelativeLayout
+                        android:id="@+id/dayafter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/ThirdDayText"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textview51"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="34dp"
+                            android:layout_marginStart="34dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Select Time Slot"
+                            android:textColor="#000" />
+
+
+                        <RadioGroup
+                            android:id="@+id/RadioGroupThird"
+                            android:layout_below="@+id/textview51"
+                            android:layout_marginLeft="34dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="34dp">
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from9to10"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                 android:layout_marginBottom="6dp"
+                                android:background="#fff"
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="9:00 - 10:00 Hrs"
+                                android:textSize="20sp"
+                                android:visibility="visible" />
+
+                            <View
+                                android:layout_width="match_parent"
+
+                                android:layout_height="2dp"
+                                android:background="@color/lightgray" />
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from10to11"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="6dp"
+                                android:background="#fff"
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="10:00 - 11:00 Hrs"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+
+                                android:layout_height="2dp"
+                                 android:background="@color/lightgray" />
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from11to12"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                android:layout_marginBottom="7dp"
+                                android:background="#fff"
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="11:00 - 12:00 Hrs"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/RadioGroupTomorrow_from11to12"
+                                android:background="@color/lightgray" />
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from12to1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                android:layout_marginBottom="8dp"
+                                android:background="#fff"
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="12:00 - 13:00 Hrs"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+
+                                android:layout_height="2dp"
+                                 android:background="@color/lightgray" />
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from1to2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                 android:layout_marginBottom="6dp"
+                                android:background="#fff"
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="13:00 - 14:00 Hrs"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/RadioGroupTomorrow_from1to2"
+                                android:background="@color/lightgray" />
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from2to3"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                 android:background="#fff"
+
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="14:00 - 15:00 Hrs"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/RadioGroupTomorrow_from2to3"
+                                android:background="@color/lightgray" />
+
+                            <RadioButton
+                                android:id="@+id/RadioGroupThird_from3to4"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+
+                                 android:layout_marginTop="8dp"
+                                android:background="#fff"
+                                android:buttonTint="@android:color/holo_blue_bright"
+                                android:paddingLeft="22dp"
+                                android:paddingStart="22dp"
+                                android:text="15:00 - 15:30 Hrs"
+                                android:textSize="20sp" />
+
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+<!--
+                <view
+                    android:id="@+id/views4"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/relatives4"
+                    android:background="@color/lightgray" />
+-->
+        <RelativeLayout
+            android:id="@+id/MainRelativeFourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view4"
+            android:visibility="gone"
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/FourthDayText"
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:drawableRight="@drawable/back_blue"
+                android:gravity="left|center"
+                android:text="Thursday"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/afterdayafter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/FourthDayText"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textview61"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Select Time Slot"
+                    android:textColor="#000" />
+
+
+
+                <RadioGroup
+                    android:id="@+id/RadioGroupFourth"
+                    android:layout_below="@+id/textview61"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp">
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from9to10"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                          android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="9:00 - 10:00 Hrs"
+                        android:textSize="20sp"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from10to11"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="10:00 - 11:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/RadioGroupTomorrow_from10to11"
+                        android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from11to12"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_marginBottom="7dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="11:00 - 12:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                        android:layout_below="@+id/RadioGroupTomorrow_from11to12"
+                        android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from12to1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+
+                        android:layout_marginBottom="8dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="12:00 - 13:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from1to2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                          android:layout_marginBottom="6dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="13:00 - 14:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from2to3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                          android:background="#fff"
+
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="14:00 - 15:00 Hrs"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+
+                        android:layout_height="2dp"
+                         android:background="@color/lightgray" />
+
+                    <RadioButton
+                        android:id="@+id/RadioGroupFourth_from3to4"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                         android:layout_marginTop="8dp"
+                        android:background="#fff"
+                        android:buttonTint="@android:color/holo_blue_bright"
+                        android:paddingLeft="22dp"
+                        android:paddingStart="22dp"
+                        android:text="15:00 - 15:30 Hrs"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+ </RelativeLayout>
+  </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".help_fragment"
+    android:fitsSystemWindows="true"
+    >
+    <EditText
+         android:id="@+id/feedback_edit"
+        android:layout_width="395dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="330dp"
+        android:layout_gravity="center_vertical"
+         android:background="#fff"
+        android:gravity="start"
+
+        android:hint="Please share your problem briefly so that we can help you easily "
+        />
+
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+                android:background="@android:color/holo_blue_bright"
+            android:clickable="true"
+            android:textSize="18sp"
+            android:text="Send"
+            android:textColor="#fff" />
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!--
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:background="@android:color/darker_gray"
+        tools:context="com.example.sanjay.tabcard.help_fragment"
+        android:fitsSystemWindows="true"
+
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView2">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="450dp"
+        android:background="@color/album_title"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/album_title"
+        android:id="@+id/toobar_help"
+        >
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/actionModeCloseDrawable"
+            />
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fitsSystemWindows="true"
+                android:gravity="center"
+                android:text="Help"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/feedback_edit"
+            android:layout_width="345dp"
+            android:layout_height="370dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/scrollView2"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="70dp"
+            android:background="#fff"
+            android:gravity="start"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:hint="Please share your problem briefly so that we can help you easily "
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/send"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorAccent"
+            android:text="Send"
+            android:textColor="#fff" />
+    </RelativeLayout> -->

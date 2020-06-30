@@ -1,0 +1,40 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TabFragment">
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+     android:id="@+id/appbar"
+    android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tabs"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorHeight="3dp"
+             app:tabIndicatorColor="@android:color/holo_blue_bright"
+            app:tabSelectedTextColor="@android:color/holo_blue_bright"
+            app:tabTextColor="#000" />
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar"
+            />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

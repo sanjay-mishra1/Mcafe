@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetLeft="-10dp"
+            app:contentInsetStart="-10dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <RelativeLayout
+                android:id="@+id/relativeToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff">
+
+                <EditText
+                    android:id="@+id/searchbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/holo_blue_bright"
+                    android:elevation="5dp"
+                    android:hint="Enter food"
+                    android:textColor="#fff"
+                    android:visibility="invisible" />
+                 <LinearLayout
+                     android:layout_width="wrap_content"
+                     android:orientation="horizontal"
+                     android:layout_alignParentEnd="true"
+                     android:layout_centerVertical="true"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentRight="true">
+                <RelativeLayout
+                    android:id="@+id/fooditems_clicked"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginRight="3dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+
+                    android:layout_toLeftOf="@id/cake_activity"
+                    android:layout_toStartOf="@id/cake_activity"
+                    android:background="@drawable/state_food_items"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingTop="1dp">
+
+
+                    <ImageView
+                        android:id="@+id/food_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
+
+                        android:src="@drawable/all_included"
+                        android:tint="#fff" />
+
+
+
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/cake_activity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/state_food_items"
+                    android:baselineAlignBottom="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/cake"
+                    android:tint="#fff"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+
+                    android:visibility="visible" />
+
+                     <ImageButton
+                         android:id="@+id/search"
+                         android:layout_width="40dp"
+                         android:layout_height="40dp"
+                         android:layout_alignParentEnd="true"
+                         android:layout_alignParentRight="true"
+                         android:layout_centerVertical="true"
+                         android:layout_marginEnd="5dp"
+                         android:layout_marginRight="5dp"
+                         android:background="@drawable/state_food_items"
+                         android:baselineAlignBottom="true"
+                         android:foreground="?attr/selectableItemBackgroundBorderless"
+                         android:scaleType="centerInside"
+                         android:src="@drawable/ic_search_black_24dp"
+
+                         android:tint="#fff"
+                         android:visibility="visible" />
+                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/name_linear"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/logo"
+                        app:fontFamily="@font/frenchscript"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="vertical"
+                        android:text="@string/m"
+
+                        android:textColor="@color/app_blue"
+                        android:textSize="40sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/logo_part2"
+                        app:fontFamily="@font/frenchscript"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="vertical"
+
+                        android:text="@string/can"
+                        android:textColor="@color/app_pink"
+                        android:textSize="40sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

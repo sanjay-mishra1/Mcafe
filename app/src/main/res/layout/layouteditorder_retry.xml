@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="11.9dp"
+            android:layout_marginStart="11.9dp"
+            android:background="#ff00ddff" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@id/linear"
+                 android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="sssssssssssssssssssssssssssssssssssssssssss"
+                android:textSize="16sp"
+                android:visibility="visible"
+                android:layout_toLeftOf="@id/linear" />
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/CakePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="600"
+                    android:textColor="@color/album_title"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/multiply"
+                    android:layout_width="16dp"
+                    android:layout_height="23dp"
+
+                    android:text="X"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/increase"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_marginTop="3dp"
+                    android:background="#fff"
+                    android:src="@drawable/add"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/edit_quantity1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginRight="6dp"
+
+                    android:layout_marginTop="3dp"
+                    android:text="14"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/decrease"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/remove"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="#898888" />
+
+</LinearLayout>

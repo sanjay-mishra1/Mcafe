@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+
+        android:id="@+id/Relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+        android:orientation="vertical"
+         >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yello">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="100dp"
+                    android:layout_height="89dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                     android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_centerVertical="true"
+                     android:clickable="true"
+                     android:src="@drawable/add"
+                    android:focusable="true" />
+
+                <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/Desc"
+
+android:visibility="gone"    />
+
+                <RelativeLayout
+                    android:id="@+id/click1"
+                    android:layout_width="283dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/thumbnail"
+                    android:layout_toRightOf="@+id/thumbnail"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                         android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/CakePrice"
+                        android:layout_width="65dp"
+                        android:layout_height="24dp"
+                        android:layout_below="@+id/title"
+                        android:layout_marginTop="3dp"
+                         android:textColor="@color/colorAccent"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/buttons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/title"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imageButton_add1"
+                            android:layout_width="30dp"
+
+                            android:layout_height="30dp"
+
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/add"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/edit_quantity1"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginBottom="11dp"
+                            android:textColor="#000"
+                            android:textSize="30sp" />
+
+                        <ImageView
+                            android:id="@+id/imageButton_remove1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/remove"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/cancel"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/cancel" />
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

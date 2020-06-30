@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".final_food_list">
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#03f5d5"
+    android:id="@+id/tool"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Food "
+android:textColor="#fff"
+
+        />
+
+</android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/foodlist"
+        android:scrollbarSize="@dimen/cardview_compat_inset_shadow"
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+<include layout="@layout/fragment_mutual_fund"/>
+</android.support.constraint.ConstraintLayout>

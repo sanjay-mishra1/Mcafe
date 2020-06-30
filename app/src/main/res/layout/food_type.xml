@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="300dp"
+    android:layout_gravity="center"
+
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/show_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|center_horizontal"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/show"
+                android:layout_toLeftOf="@id/show"
+                 android:layout_marginRight="30dp"
+                 android:src="@drawable/all_included"
+                 />
+
+            <TextView
+
+                android:id="@+id/show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:drawablePadding="50dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="Show All   "
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/show_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/show"
+                android:layout_toRightOf="@id/show"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/meal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@id/Meal"
+            android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/Meal"
+                android:src="@drawable/meal"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+
+                android:id="@+id/Meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:drawablePadding="50dp"
+                android:gravity="left|start"
+                android:paddingBottom="16dp"
+                android:paddingEnd="16dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="Meal           "
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:paddingRight="16dp" />
+
+            <ImageView
+                android:id="@+id/meal_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/Meal"
+                android:layout_toRightOf="@id/Meal"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/snacks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|center_horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="21dp"
+                android:layout_toLeftOf="@id/Snacks"
+                android:layout_toStartOf="@id/Snacks"
+                    android:layout_marginLeft="1dp"
+                android:src="@drawable/snaks"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+
+                android:id="@+id/Snacks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                 android:layout_marginRight="12dp"
+
+                 android:drawablePadding="50dp"
+                android:gravity="end"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="  Snacks"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/snacks_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="1dp"
+                android:layout_marginStart="57dp"
+                android:layout_toEndOf="@id/Snacks"
+                android:layout_toRightOf="@id/Snacks"
+                android:src="@drawable/ic_check_black_24dp"
+
+                android:tint="#ff00ddff"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/beverages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/Beverages"
+            android:layout_toLeftOf="@id/Beverages"
+
+            android:layout_marginRight="30dp"
+            android:src="@drawable/tea" />
+
+        <TextView
+
+            android:id="@+id/Beverages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:drawablePadding="50dp"
+            android:gravity="center"
+
+            android:paddingBottom="10dp"
+             android:paddingTop="10dp"
+            android:text="Beverages"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/beverages_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="17dp"
+            android:layout_toEndOf="@id/Beverages"
+            android:layout_toRightOf="@id/Beverages"
+            android:src="@drawable/ic_check_black_24dp"
+            android:tint="#ff00ddff"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/special"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/Special"
+            android:layout_toLeftOf="@id/Special"
+
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|center_horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/Special"
+                android:layout_toLeftOf="@id/Special"
+
+                android:layout_marginRight="30dp"
+                android:src="@drawable/cake" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:drawablePadding="50dp"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="Special       "
+                android:id="@+id/Special"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/specia_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/Special"
+                android:layout_toRightOf="@id/Special"
+                android:src="@drawable/ic_check_black_24dp"
+                android:tint="#ff00ddff"
+
+                android:visibility="invisible" />
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/Special"
+        android:layout_toLeftOf="@id/Special"
+
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center|center_horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/favText"
+            android:layout_toLeftOf="@id/favText"
+             android:layout_marginRight="30dp"
+            android:src="@drawable/heart_blue" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:drawablePadding="50dp"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:text="Favorite       "
+            android:id="@+id/favText"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/fav_tick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/favText"
+            android:layout_toRightOf="@id/favText"
+            android:src="@drawable/ic_check_black_24dp"
+            android:tint="#ff00ddff"
+
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+    </LinearLayout>
+

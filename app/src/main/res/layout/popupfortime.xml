@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+android:id="@+id/popuprelative"
+    android:layout_height="match_parent"
+    android:background="#96000000"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/lightgray">
+
+            <TextView
+                android:id="@+id/del"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Select Delivery Slot"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/from9to10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/del"
+                android:layout_marginBottom="6dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="9AM-10AM"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/RadioGroupTomorrow_from10to11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/from9to10"
+                android:layout_marginBottom="6dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="10AM-11AM"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/RadioGroupTomorrow_from11to12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:layout_below="@+id/RadioGroupTomorrow_from10to11"
+                android:layout_marginBottom="7dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="11AM-12PM"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/RadioGroupTomorrow_from12to1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RadioGroupTomorrow_from11to12"
+                android:layout_marginBottom="8dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="12PM-1AM"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/RadioGroupTomorrow_from1to2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RadioGroupTomorrow_from12to1"
+                android:layout_marginBottom="6dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="1PM 2PM"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/RadioGroupTomorrow_from2to3"
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RadioGroupTomorrow_from1to2"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="2PM-3PM"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/from3to4"
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RadioGroupTomorrow_from2to3"
+                android:layout_marginTop="8dp"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="3PM-3:30PM"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

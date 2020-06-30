@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:layout_gravity="end"
+    android:gravity="center_vertical"
+    android:paddingTop="8dp"
+    android:maxWidth="240dp"
+    android:minWidth="35dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_weight="1"
+        android:maxWidth="240dp"
+        android:minWidth="35dp"
+        android:gravity="end"
+         >
+
+        <com.sanproject.mcafe.MessageTime
+            android:id="@+id/msg_layout"
+            android:padding="8dp"
+
+            android:minWidth="35dp"
+            android:layout_marginRight="8dp"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_rectangle_green"
+
+            android:layout_gravity="end|bottom"
+            android:gravity="start|center_vertical"
+            app:viewPartMain="@+id/text_message_body"
+            app:viewPartSlave="@+id/lytStatusContainer"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/text_message_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:focusableInTouchMode="false"
+                android:gravity="start|top"
+                android:maxWidth="240dp"
+
+                android:text="sssssssssssss s  dddddddds  sjfsjf ksjklfj jlskjfl kjskjf kjsklfj kjsdklfj  kjdsklfj kjsfjlsjf kjlsfj s  s  s  s  s  ssssssssssssssssssssssss  sss  ss  sss ss   @string/sss"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/lytStatusContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="end"
+                 android:minWidth="60dp"
+                android:layout_marginStart="5dp"
+             >
+
+                <TextView
+                    android:id="@+id/text_message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="end"
+                    android:text="1;"
+                    android:maxLines="1"
+                    android:textColor="#d4d4d4"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/status"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/received" />
+
+
+            </LinearLayout>
+
+        </com.sanproject.mcafe.MessageTime>
+    </LinearLayout>
+</LinearLayout>
+<!--
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+          android:id="@+id/text_contraint_sent"
+
+        android:layout_height="wrap_content">
+
+     <TextView
+        android:id="@+id/text_message_body"
+        android:text="hi sfsfsfsdfsfsdhkkkkhkhkhkhkhkhkhkhkkhkhkkhkjkfsdfsdfsfsdfsdfsdfsfsdfsf"
+          android:padding="8dp"
+          android:maxWidth="240dp"
+         android:minWidth="35dp"
+         android:background="@drawable/rounded_rectangle_green"
+         android:layout_marginRight="8dp"
+         app:layout_constraintRight_toRightOf="parent"
+         android:orientation="vertical"
+         app:layout_constraintTop_toTopOf="parent"
+         android:layout_alignParentRight="true"
+         android:layout_marginEnd="8dp"
+
+         android:layout_alignParentEnd="true"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textSize="@dimen/message_font_size"
+        android:textColor="#ffffff"
+         />
+
+
+
+        <TextView
+            android:id="@+id/text_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:text="11:40"
+            android:textSize="12sp"
+             app:layout_constraintRight_toLeftOf="@+id/text_message_body"
+            android:layout_marginEnd="4dp" />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
+-->

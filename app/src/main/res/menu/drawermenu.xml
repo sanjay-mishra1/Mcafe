@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Menu"
+        android:id="@+id/Menu"
+        android:icon="@drawable/menu"/>
+
+    <item android:title="Orders"
+        android:id="@+id/Orders"
+        android:icon="@drawable/foodlist"
+        />
+    <item android:title="Notification"
+        android:id="@+id/notification"
+        android:icon="@drawable/ic_notifications_active_black_24dp"
+        />
+
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:title="Account Settings"
+                android:icon="@drawable/setting"
+                android:id="@+id/settings"
+                />
+
+            <item android:title="Log out"
+                android:icon="@drawable/logout"
+                android:id="@+id/logout"
+                />
+        </menu>
+    </item>
+
+    <group android:id="@+id/group_settings_id">
+
+
+        <item android:title="Help"
+            android:id="@+id/help"
+            android:icon="@drawable/help"/>
+        <item android:title="Feedback"
+            android:icon="@drawable/feedback"
+            android:id="@+id/feedback"
+                        />
+
+        <item android:title="About"
+            android:icon="@drawable/ic_info_black"
+            android:id="@+id/about_app"
+            />
+        <item android:title="Terms and Conditions"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:id="@+id/terms_conditions"
+            />
+        <item android:title="Privacy Policy"
+            android:icon="@drawable/ic_vpn_lock_black_24dp"
+            android:id="@+id/privacy_policy"
+            />
+    </group>
+
+
+
+</menu>

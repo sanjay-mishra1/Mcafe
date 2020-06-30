@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sucessfulTransaction"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    android:paddingLeft="20dp"
+    android:visibility="gone"
+    tools:showIn="@layout/order_status"
+    android:paddingStart="20dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/orderid"
+        android:background="@color/lightgray"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_below="@+id/amount1"
+        android:layout_centerHorizontal="true"
+        android:background="@color/lightgray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/transactionid"
+        android:background="@color/lightgray"
+        android:layout_alignParentLeft="true" />
+
+
+    <gifLoader.GifImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/PaymentStatus1"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="192dp"
+        android:text="@string/transaction_sucessful"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:visibility="visible"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="224dp"
+        android:padding="17dp"
+        android:text="@string/your_order_has_been_placed_successfully"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:fontFamily="sans-serif"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textview"
+        android:layout_marginTop="20dp"
+        android:text="@string/OrderNo"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/orderid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PaymentStatus1"
+        android:layout_alignStart="@+id/PaymentStatus1"
+        android:layout_below="@+id/textView9"
+        android:text="@string/OrderNo"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/banktext"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/amount1"
+        android:layout_marginTop="20dp"
+        android:text="Bank"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/transactionid"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView16"
+
+        android:text="1sssssssssss111111212"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/orderid"
+        android:layout_marginTop="20dp"
+        android:text="Transaction"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transactionid"
+        android:layout_marginTop="20dp"
+
+
+        android:text="Amount"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bank"
+        android:text="Delivery"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/amount1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView10"
+        android:text="amount"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/banktext"
+        android:text="bank"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/deliverytime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/textView14"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_alignLeft="@+id/orderid"
+        android:layout_alignStart="@+id/orderid"
+        android:text="deliverytime"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/gotoorders"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/bank"
+        android:visibility="visible"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="27dp"
+            android:text="You can edit your order in "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/goteditorders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView15"
+            android:layout_alignBottom="@+id/textView15"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/textView15"
+            android:layout_toRightOf="@+id/textView15"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/orders"
+            android:textColor="@color/deeppurple"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

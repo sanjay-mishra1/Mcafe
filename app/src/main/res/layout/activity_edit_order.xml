@@ -1,0 +1,476 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageButton
+                    android:id="@+id/backpopupweight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/backpopupweight"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/backpopupweight"
+                    android:layout_toRightOf="@+id/backpopupweight"
+                    android:text="Edit Order"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/save_food"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp">
+
+
+        <RelativeLayout
+            android:id="@+id/color"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+
+            <TextView
+                android:id="@+id/Orderstatus1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/statusbackground"
+                android:gravity="center"
+                android:text="Pending"
+                android:textColor="#fff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/orderno1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/Orderstatus1"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/album_title"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_alignBaseline="@+id/orderno1"
+                android:layout_alignBottom="@+id/orderno1"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/album_title"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/orderno1"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_editorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/cartamount"
+                    android:layout_width="200dp"
+                    android:layout_height="36dp"
+                    android:layout_alignLeft="@+id/taxs"
+                    android:layout_alignStart="@+id/taxs"
+                    android:layout_below="@+id/recycler_editorder"
+                    android:gravity="center_vertical"
+                    android:text="Cart Amount"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                     android:layout_below="@+id/recycler_editorder"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:text="₹ 921.00"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/view0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/cartamount"
+                    android:background="#898888"
+
+                    />
+
+                <TextView
+                    android:id="@+id/taxs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignLeft="@+id/Other"
+                    android:layout_alignStart="@+id/Other"
+                    android:layout_below="@+id/cartamount"
+                    android:gravity="center_vertical"
+                    android:text="@string/tax"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                     android:layout_below="@+id/view0"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp" />
+
+                <View
+                    android:id="@+id/view00"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/taxs"
+                    android:background="#898888"
+
+                    />
+
+                <TextView
+                    android:id="@+id/Other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignStart="@+id/textView6"
+                    android:layout_below="@+id/view00"
+                    android:gravity="center_vertical"
+                    android:text="@string/other"
+
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/OtherPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/Other"
+                    android:layout_alignBottom="@+id/Other"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                     android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+
+                    android:background="#2275e2"
+                    android:layout_marginStart="3dp" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/Other"
+                    android:background="#ff00ddff"
+
+                    />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/view1"
+                    android:layout_marginTop="3dp"
+                    android:background="#ff00ddff"
+
+                    />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="1dp"
+                    android:layout_height="152dp"
+
+                    android:layout_alignTop="@+id/cartamount"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/view4"
+                    android:layout_toRightOf="@+id/view4"
+                    android:background="#ff00ddff" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@+id/view2"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/view3"
+                    android:layout_toRightOf="@+id/view3"
+                    android:gravity="center"
+                    android:text="@string/pay_amount"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/total_final2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/tax"
+                    android:layout_alignRight="@+id/tax"
+                    android:layout_alignTop="@+id/view2"
+                    android:layout_marginTop="5dp"
+                     android:background="#4a00ddff"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/PayAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_below="@+id/recycler_editorder"
+                    android:layout_alignParentEnd="true"
+                         android:gravity="center|fill|clip_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_marginRight="10dp"
+                     android:layout_alignParentRight="true"
+                    android:layout_marginEnd="10dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout13">
+
+                <TextView
+                    android:id="@+id/PaymentStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#4a00ddff"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/paymentStatusTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/PaymentStatus1"
+                    android:layout_alignBottom="@+id/PaymentStatus1"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_alignStart="@+id/textView4"
+                    android:text="Payment Received"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/paymentStatusTextview"
+                    android:background="@color/lightgray" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/view12"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Delivery at"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+
+
+
+                <include
+                    android:id="@+id/deliveryFormat"
+                    layout="@layout/deliveryformat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textView4"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/Infos_for_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/deliveryFormat"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/extraInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/Infos_for_order"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/order_status_pending"
+                    android:textAlignment="center"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/cancel2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/remainingPay"
+                android:layout_alignStart="@+id/remainingPay"
+                android:layout_below="@+id/relative"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/rounded_button_transparent"
+                android:text="cancel the order"
+                android:textColor="@color/colorPrimary"
+                android:visibility="visible" />
+
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/remainingPay"
+                android:layout_marginEnd="22dp"
+                android:layout_marginRight="22dp"
+
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/remainingPay"
+                style="@style/Widget.AppCompat.Button.Colored"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cancel2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/rounded_button_transparent"
+                android:foregroundTint="@color/lightgray"
+                android:foregroundTintMode="src_atop"
+                android:gravity="right|center"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/payProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_below="@+id/cancel2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="9dp"
+                android:layout_centerHorizontal="true"
+                 android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/save_food"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/holo_blue_bright"
+        android:backgroundTintMode="src_in"
+        android:foregroundTint="@color/lightgray"
+        android:text="Save changes"
+        android:textColor="#fff"
+        android:visibility="gone" />
+
+</RelativeLayout>

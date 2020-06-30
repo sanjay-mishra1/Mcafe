@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsCoordinate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <ImageButton
+                    android:id="@+id/backpopupweight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/back"
+                    android:onClick="onbackclicked" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/backpopupweight"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/backpopupweight"
+                    android:layout_toRightOf="@+id/backpopupweight"
+                    android:text="@string/settings"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/SettingsImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+            android:layout_marginTop="70dp"
+
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/infoRelative"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="69dp"
+                android:background="#bc000000">
+
+
+                <TextView
+                    android:id="@+id/edituser1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="73dp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/edituser1"
+                    android:layout_toEndOf="@+id/edituser1"
+                    android:layout_toRightOf="@+id/edituser1"
+                    android:background="#00ffffff"
+                    android:drawableBottom="@drawable/ic_edit_black_24dp" />
+
+                <TextView
+                    android:id="@+id/editphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="68dp"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/editemail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="32dp"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/img_text"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/name_circle"
+                    android:gravity="center"
+                    android:shadowColor="@android:color/holo_blue_bright"
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/UserImage"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/name_circle"
+                    android:gravity="center"
+                    android:shadowColor="@android:color/holo_blue_bright"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/edit_profile_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/cerclebackgroundpink"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_camera_alt_black_24dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/editpassword"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/infoRelative"
+                android:layout_marginTop="30dp"
+                android:background="#abffffff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:text="  Change password"
+                android:textAlignment="viewStart"
+                android:textColor="#000"
+                android:textSize="20dp"
+                app:fontFamily="sans-serif"
+                tools:ignore="RtlCompat"
+                tools:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editpassword"
+                android:background="#b5ffffff"
+                android:clickable="false"
+                android:text=" College Id"
+                android:textSize="20dp"
+                android:visibility="visible"
+                tools:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:textColor="@color/cardview_dark_background" />
+
+            <TextView
+                android:id="@+id/collegeId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView5"
+                android:background="#b4ffffff"
+                android:clickable="true"
+                android:drawableLeft="@drawable/collegeicon"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center"
+                android:text="s"
+                android:textAlignment="viewStart"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:visibility="visible"
+                tools:ignore="RtlCompat"
+                tools:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/DeleteId"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/collegeId"
+                android:background="#a2ffffff"
+                android:clickable="true"
+                android:drawableEnd="@drawable/arrow_right"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:text="  Delete Account"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:visibility="gone"
+                tools:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/LogoutId"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/DeleteId"
+                android:background="#bdffffff"
+                android:clickable="true"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/arrow_right"
+                android:gravity="center_vertical"
+                android:text="  Logout"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:visibility="visible"
+                tools:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                tools:textColor="#000000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/DeleteId"
+                android:background="#000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/collegeId"
+                android:background="#000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/editpassword"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="#000" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

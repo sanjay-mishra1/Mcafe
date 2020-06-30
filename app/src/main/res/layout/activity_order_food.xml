@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".orderFood">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/backpopupweight"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/backpopupweight"
+                    android:layout_toRightOf="@+id/backpopupweight"
+                    android:text="CHECKOUT"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/pay50"
+        android:layout_below="@+id/appBarLayout">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#f1efef">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/foodrecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#8be2dede"
+                android:visibility="visible">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/delivery"
+                android:layout_alignStart="@+id/delivery"
+
+                android:layout_below="@+id/foodrecycler"
+                android:layout_marginTop="19dp"
+                android:text="Order summery"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+                    <!-- android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                > -->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_orderfood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:labelFor="@+id/foodrecycler">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/cartamount"
+                        android:layout_width="200dp"
+                        android:layout_height="36dp"
+                        android:layout_alignLeft="@+id/taxs"
+                        android:layout_alignStart="@+id/taxs"
+                        android:layout_below="@+id/recycler_orderfood"
+                        android:gravity="center_vertical"
+                        android:text="Cart Amount"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/total_final"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/cartamount"
+                        android:layout_alignBottom="@+id/cartamount"
+                        android:layout_toLeftOf="@+id/total_quantity"
+                        android:layout_toStartOf="@+id/total_quantity"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view0"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/cartamount"
+                        android:background="#898888"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/taxs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignLeft="@+id/Other"
+                        android:layout_alignStart="@+id/Other"
+                        android:layout_below="@+id/cartamount"
+                        android:gravity="center_vertical"
+                        android:text="TAX"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/taxs"
+                        android:layout_alignBottom="@+id/taxs"
+                        android:layout_alignLeft="@+id/OtherPayment"
+                        android:layout_alignStart="@+id/OtherPayment"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view00"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/taxs"
+                        android:background="#898888"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_alignLeft="@+id/textView6"
+                        android:layout_alignStart="@+id/textView6"
+                        android:layout_below="@+id/view00"
+                        android:gravity="center_vertical"
+                        android:text="Other"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/OtherPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Other"
+                        android:layout_alignBottom="@+id/Other"
+                        android:layout_alignLeft="@+id/total_final"
+                        android:layout_alignStart="@+id/total_final"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/Other"
+                        android:background="#ff00ddff"
+
+                        />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/view1"
+                        android:layout_marginTop="3dp"
+                        android:background="#ff00ddff"
+
+                        />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="1dp"
+                        android:layout_height="153dp"
+
+                        android:layout_alignTop="@+id/cartamount"
+                        android:layout_marginLeft="11.9dp"
+                        android:layout_marginStart="11.9dp"
+
+                        android:background="#ff00ddff" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@+id/view2"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_toEndOf="@+id/view3"
+                        android:layout_toRightOf="@+id/view3"
+                        android:gravity="center"
+                        android:text="Pay Amount"
+                        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/TotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+
+                        android:layout_alignBaseline="@+id/textView6"
+                        android:layout_alignBottom="@+id/textView6"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#4a00ddff"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/total_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/TotalAmount"
+                        android:layout_alignBottom="@+id/TotalAmount"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="bottom"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/main"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:paddingTop="40dp"
+                android:text="DELIVERY"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/delivery"
+                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+
+            android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content">
+                   <RadioButton
+                        android:id="@+id/lunchtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="LunchOnclick"
+                        android:text="LUNCH TIME(12:50)" />
+
+                    <RadioButton
+                        android:id="@+id/deliverlater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="3dp"
+                         android:onClick="DeliveryTimeOnclick"
+                        android:text="Deliver later"
+                        android:textAllCaps="true" />
+
+                </RelativeLayout>
+            </RadioGroup>
+
+            <include
+                android:id="@+id/deliveryformat"
+                layout="@layout/deliveryformat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/delivery"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/pay50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+          android:background="@android:color/holo_blue_bright"
+        android:text="Payments"
+        android:textColor="#fff" />
+</RelativeLayout>

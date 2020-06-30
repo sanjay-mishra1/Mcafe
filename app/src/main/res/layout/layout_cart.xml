@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="start">
+
+
+
+                <ImageButton
+                    android:layout_width="25dp"
+                      android:layout_height="25dp"
+                    android:id="@+id/back"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="backtomenu"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginStart="10dp" />
+
+
+                <include
+                    android:id="@+id/cart_type"
+                    layout="@layout/food_items_top_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@id/back"
+                    android:layout_toRightOf="@id/back" />
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:id="@+id/containerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:translationZ="10dp"
+        android:elevation="3dp"
+        android:layout_alignParentLeft="true">
+
+    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cart_type_selector"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:cardCornerRadius="6dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="47dp">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#13000000"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/app_pink"
+                android:id="@+id/top_img"
+
+                android:src="@drawable/ic_add_shopping_cart_black_24dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/top_text"
+
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingEnd="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:text="  Cart      "
+                android:textColor="@color/app_pink"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:id="@+id/bottom_img"
+                android:tint="#ff00ddff"
+                android:src="@drawable/cake" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/bottom_text"
+                android:drawablePadding="50dp"
+                android:gravity="center"
+                android:paddingBottom="16dp"
+                android:paddingTop="10dp"
+                android:text=" CakeCart"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".cakeDetailView">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            app:tabIndicatorColor="@android:color/holo_blue_bright"
+            app:tabMode="fixed"
+            app:tabMaxWidth="611dp"
+            app:tabIndicatorHeight="3dp"
+
+            app:tabGravity="fill"
+            app:tabSelectedTextColor="@android:color/holo_blue_bright"
+            app:tabTextColor="#000" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/tabs"
+            android:background="@android:color/darker_gray"
+            android:minWidth="5dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view"
+            android:background="#fff" />
+
+    </RelativeLayout>
+</LinearLayout>

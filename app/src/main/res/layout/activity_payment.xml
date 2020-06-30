@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/parent"
+    android:layout_height="match_parent"
+    tools:context=".payment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:background="#fff"
+            android:elevation="0dp"
+            android:foregroundTint="@color/common_google_signin_btn_text_light_default"
+            android:onClick="onbackclicked"
+            android:paddingLeft="-28dp"
+            android:id="@+id/back"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/back"
+            android:layout_centerVertical="true"
+             android:text="Payment"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:layout_toRightOf="@id/back" />
+        <include
+            android:id="@+id/cart_type"
+            layout="@layout/food_items_top_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cart_type_selector"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:visibility="gone"
+            app:cardElevation="15dp"
+            android:layout_marginTop="45dp"
+            app:cardCornerRadius="6dp"
+            android:layout_marginLeft="47dp"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#13000000"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center|center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/top_img"
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/top_text"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="10dp"
+                    android:text="  Cart      "
+                    android:textColor="@color/app_pink"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center|center_horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="4dp"
+                    android:id="@+id/bottom_img"
+                     />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/bottom_text"
+                    android:drawablePadding="50dp"
+                    android:gravity="center"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="10dp"
+                    android:text=" CakeCart"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+      android:layout_width="match_parent"
+      android:layout_below="@id/appbar"
+            android:elevation="10dp"
+            android:id="@+id/radioGroup"
+      android:layout_height="wrap_content">
+
+      <RadioButton
+          android:id="@+id/halfpay"
+          android:layout_width="match_parent"
+          android:layout_height="70dp"
+          android:paddingRight="30dp"
+          android:drawableRight="@drawable/ic_paytm_vector"
+          android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+          android:text="Pay 50%" />
+
+      <RadioButton
+          android:id="@+id/fullpay"
+          android:layout_width="match_parent"
+          android:layout_height="70dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/halfpay"
+          android:layout_marginTop="11dp"
+          android:visibility="gone"
+          android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+          android:drawableRight="@drawable/ic_paytm_logo"
+          android:text="pay 100%" />
+
+      <RadioButton
+          android:id="@+id/payuPay"
+          android:layout_width="match_parent"
+          android:layout_height="70dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/halfpay"
+          android:layout_marginTop="11dp"
+          android:paddingRight="60dp"
+          android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+          android:drawableRight="@drawable/ic_credit_card_black_24dp"
+          android:text="Credit / Debit card" />
+            <RadioButton
+                android:id="@+id/razorpay"
+                android:layout_width="match_parent"
+                android:paddingRight="60dp"
+                android:layout_marginTop="11dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="Other payment options" />
+  </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="-71dp"
+            android:paddingTop="20dp"
+            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/currency"
+                android:layout_marginEnd="45dp"
+                android:layout_marginTop="-5dp"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/gray"
+                android:id="@+id/view"
+                android:layout_marginTop="40dp"
+                android:layout_height="1dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="20dp"
+                android:text="Includes NetBanking, UPI, Credit /  Debit cards and other wallets"
+                android:layout_below="@id/view"/>
+        </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_alignParentStart="true"
+        android:background="@color/cardview_shadow_end_color" />
+
+</RelativeLayout>
+    <include layout="@layout/loading_layout"
+        android:visibility="gone"
+        android:id="@+id/loading"/>
+    <Button
+        android:id="@+id/paybutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ff00ddff"
+        android:text="Pay"
+        android:textSize="18sp"
+        android:textColor="#fff" />
+</RelativeLayout>

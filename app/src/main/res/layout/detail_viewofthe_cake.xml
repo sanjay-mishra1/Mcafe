@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/mainrelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cakeDetailView">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:background="#fff"
+        android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/end"
+                    style="@android:style/Widget.Holo.Light.ImageButton"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="150dp"
+                    android:layout_marginRight="1dp"
+                    android:background="#00ffffff"
+                    android:onClick="onclickback"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="12dp"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:lines="1"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginStart="42dp"
+                    android:text="Select Cake"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_below="@+id/appbar"
+      android:id="@+id/relative"
+      android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cakeRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="visible">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <include
+                android:id="@+id/imagepoints"
+                layout="@layout/layout_imagepointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="282dp" />
+
+            <TextView
+                android:id="@+id/CakePrice"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                 android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                 android:layout_below="@+id/cakeRecycler"
+                android:background="#00ffffff"
+                 android:text="@string/rupess"
+                 android:textColor="#000"
+                android:textSize="30sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/prices"
+                android:layout_below="@id/CakePrice"
+                android:layout_height="40dp">
+                <TextView
+                    android:id="@+id/cakeoriginalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:text="₹ 599" />
+
+                <TextView
+                    android:id="@+id/cakediscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="2% OFF"
+                     android:textColor="@color/colorAccent"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cakeRecycler"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="17dp"
+                android:layout_toEndOf="@id/CakePrice"
+                android:layout_toRightOf="@id/CakePrice"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/rating_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawableLeft="@drawable/full_star"
+                    android:drawableStart="@drawable/full_star"
+
+                    android:paddingBottom="0dp"
+                    android:paddingTop="3dp"
+                    android:text="4.3"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/prices"
+                 android:checkedButton="@+id/r1"
+                android:orientation="horizontal"
+                android:paddingLeft="50dp">
+
+                <RadioButton
+                    android:id="@+id/r1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#2fd712"
+                    android:onClick="onclickWithoutegg"
+                    android:text="without Egg"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/r2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_red_dark"
+                    android:onClick="onclickWithegg"
+                    android:text="with Egg"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_marginTop="22dp"
+                    android:clickable="true"
+                    android:elevation="3dp"
+                    android:id="@+id/cardview"
+                    android:focusable="true"
+                    android:onClick="onclickWeight"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shadow">
+
+                    <TextView
+                        android:id="@+id/weight"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:drawableRight="@drawable/arrow_right"
+                        android:text="1/2 Kg"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/cakename"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/weight"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="12dp"
+                        android:text="Special Mango Fruit Cream Cake Half Kg aaaaaaaa"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                 android:layout_below="@+id/cardview"
+                android:layout_marginTop="18dp"
+                android:text="Deliver on"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp" />
+
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/textView13"
+    android:clickable="true"
+    android:id="@+id/cardview2"
+    android:elevation="3dp"
+    android:focusable="true"
+    android:onClick="onClickDelivery"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/deliveryDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shadow"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/Deliverytime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="11dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:text="Delivery"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/deliveryExtras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/Deliverytime"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="20dp"
+            android:text="Select delivery time (Order 1 day before )"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeDelivery"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+         android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone">
+
+        <include layout="@layout/deliveryformat" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:background="@color/lightgray"
+                android:layout_height="1dp"
+                android:layout_below="@+id/cardview2" />
+
+
+            <RelativeLayout
+                android:id="@+id/cakeExtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginRight="-6dp"
+                >
+
+                <TextView
+                    android:id="@+id/textview111"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Cake Addons"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cakeExtrasRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview111"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:visibility="visible">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/relative3"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cakeExtras"
+ >
+
+                <FrameLayout
+
+                    android:id="@+id/containerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                </FrameLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/Extras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/relative3"
+                android:layout_marginStart="5dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:lineSpacingExtra="18sp"
+
+                    android:text="Want to rate this food?"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ExtrasRecycler"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp">
+
+
+                    <ImageView
+                        android:id="@+id/Selectstar1"
+                        android:layout_width="40dp"
+
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:src="@drawable/empty_star" />
+
+                    <ImageView
+                        android:id="@+id/Selectstar2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/empty_star" />
+
+                    <ImageView
+                        android:id="@+id/Selectstar3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/empty_star" />
+
+                    <ImageView
+                        android:id="@+id/Selectstar4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/empty_star" />
+
+                    <ImageView
+                        android:id="@+id/Selectstar5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/empty_star" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="You may also like"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ExtrasRecycler"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/textview11"
+                    android:layout_marginTop="5dp"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:paddingBottom="70dp"
+                    android:visibility="visible">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBarHorizontal"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#00000000"
+        android:indeterminate="true"
+        android:indeterminateTint="@android:color/holo_blue_bright"
+        android:max="100"
+
+        android:paddingTop="38dp"
+        android:progress="45"
+        android:visibility="gone" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray"
+        android:layout_above="@id/button_cardview"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/button_cardview"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fadingEdge="none|vertical"
+        android:gravity="bottom"
+        android:elevation="3dp"
+       >
+    <LinearLayout
+        android:id="@+id/linear"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fadingEdge="none|vertical"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/tocart"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:onClick="addtocartClicked"
+            android:text="Add to cart"
+            android:textColor="#000"
+            android:textSize="17sp"
+
+            />
+
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:onClick="checkoutClicked"
+            android:text="Checkout"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

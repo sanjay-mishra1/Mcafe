@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+             android:background="#fff"
+            android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/end"
+                style="@android:style/Widget.Holo.Light.ImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="#00ffffff"
+                android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"
+        android:text="Select Cake"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+         </androidx.appcompat.widget.Toolbar>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbar"
+        >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cakeRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/cake" />
+
+            <TextView
+                android:id="@+id/selectedcake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/thumbnail"
+                android:layout_toRightOf="@+id/thumbnail"
+                android:text="Chocolate flavour"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/weightText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/thumbnail"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="choose weight"
+                android:textColor="#000" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weightText"
+                android:checkedButton="@+id/gm100"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/gm100"
+                    style="@android:style/Widget.Holo.Light.CompoundButton.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@android:color/holo_blue_bright"
+                    android:text="100gm" />
+
+                <RadioButton
+                    android:id="@+id/gm200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200gm" />
+
+                <RadioButton
+                    android:id="@+id/gm400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="400gm" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/done2"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/radioGroup"
+                android:layout_marginLeft="124dp"
+                android:layout_marginStart="124dp"
+                android:layout_marginTop="9dp"
+                android:background="@android:color/holo_blue_bright"
+                android:text="DONE"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+<include layout="@layout/loading_layout"
+    android:id="@+id/loading"/>
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Mcafe</string>
+    <string name="app_version">5</string>
+
+    <string name="action_settings">Settings</string>
+
+
+     <string name="rs_40">Rs 40</string>
+    <string name="details">Details</string>
+     <string name="most_ordered_food">Most ordered food</string>
+    <string name="top_rated_food">Top Rated Food</string>
+    <string name="deliverlater">DELIVER LATER</string>
+    <string name="monday">Monday</string>
+    <string name="pay_remaining">Pay remaining</string>
+    <string name="collect_extra_payment">Get your extra ₹ </string>
+    <string name="TotalFood">TotalFood</string>
+    <string name="OrderNo">OrderNo</string>
+    <string name="Deliver">Delivery</string>
+    <string name="reason"> If not then it may be one of the following reason\n \u2022 You have press the back button\n \u2022 Your internet connection is weak\n \u2022 Mobile data is off\n \u2022 Not sufficient amount to pay\n \u2022 Your bank is not giving transaction service at present\n \u2022 Paytm authentication failed\n \u2022 You have cancel the transaction</string>
+    <string name="pay">Pay </string>
+    <string name="rupess">₹ 4 0 0</string>
+    <string name="sucessful">Payment successful</string>
+    <string name="orders"><u>Orders</u></string>
+    <string name="confirmation_mail">We would shortly be sending you a confirmation link via your email. Please click on the link to activate your account</string>
+    <string name="PRICE">₹400</string>
+    <string name="s">s</string>
+    <string name="sss">sss</string>
+    <string name="remaining_"> ₹</string>
+    <string name="rupeesSymbol">₹</string>
+    <string name="monthname">JUL\nSAT</string>
+    <string name="earliest_delivery">Earliest Delivery:\n</string>
+    <string name="cake_flavour">\u2022\tCake Flavour - </string>
+    <string name="weight">\u2022    Weight -  </string>
+    <string name="type_cake">\u2022    Type - Cream</string>
+    <string name="shape_cake">\u2022    Shape - </string>
+    <string name="in_the_box">\u2022    In the box - Knife</string>
+    <string name="pointer">\u2022</string>
+   <string name="para1">Every cake is handcrafted and since
+        each chef has his/her own way of baking and designing a
+        cake, there might be slight variation in the product in terms
+        of design and shape.\n</string>
+    <string name="para2"> The chosen delivery time is an estimate and
+        depends on the availability of the product\n</string>
+    <string name="para3"> Occasionally, substitution of flavours/design is necessary due to temporary and/or regional unavailability issues.\n</string>
+    <string name="delivery_info">\u2022\n\u2022  \n
+        \u2022 </string>
+    <string name="bullets">\u2022</string>
+    <string name="gm200">200 gm</string>
+    <string name="gmhalf"><![CDATA[&#189; Kg ]]></string>
+    <string name="onekg">1 Kg</string>
+    <string name="age_is">Age is</string>
+    <string name="your_order_has_been_placed_successfully">Your Order has been placed successfully.\n Please visit Order History page to check the progress and more details.</string>
+    <string name="order_cancelled_By_canteen">Order is cancelled by Canteen.\n It may have following reasons
+      \n\u2022 The order is not possible on selected delivery date.\n\u2022 The order contains items which are not possible to cook due to some reasons.\n\u2022 The order have some technical issues.
+        \n\u2022 For more information about your order and money you can contact canteen any time</string>
+    <string name="order_status_pending">Your order is pending.Soon will be accepted by the canteen.Before that your can edit or cancel your order</string>
+    <string name="order_status_accepted">Your order is accepted by the canteen.\nNow you cannot cancel this order via app. Your order will be completed soon.\nThank you</string>
+    <string name="order_status_completed">Your order is completed by the canteen.\nPlease reach to the canteen to get your food.\nThank you</string>
+    <string name="order_status_deliverd">Your order is delivered by the canteen.\nThank you for using our app</string>
+    <string name="order_cancel_byClint">You have cancel this order</string>
+    <string name="recent_media">Recent media</string>
+    <string name="back">back</string>
+    <string name="add_a_caption">Add a caption...</string>
+    <string name="send">Send</string>
+    <string name="transition">animation</string>
+    <string name="say_something">Say something...</string>
+    <string name="addressTo_message_key">   </string>
+    <string name="not_your_account_log_in">Not your account? Sign in</string>
+    <string name="log_out">Log out</string>
+    <string name="menu">Menu</string>
+    <string name="pay_remaining_rs">pay remaining Rs 500</string>
+    <string name="ok">OK</string>
+    <string name="no_orders_found">No orders found</string>
+    <string name="your_thought">Your thought</string>
+    <string name="total_order">orders for this food</string>
+    <string name="in_your_food_cart">Remove from your cart</string>
+    <string name="discount_tag">% | SAVE  </string>
+    <string name="inthecart">In the cart</string>
+    <string name="no_orders_food">No orders for this food. Be the first to try this food</string>
+    <string name="person_loves">No one makes this food his favourite</string>
+    <string name="remove_food">Remove  </string>
+     <string name="total_ratings">overall %d ratings</string>
+    <string name="special">f0e9</string>
+    <string name="cart">| Cart      </string>
+    <string name="total_new_notifications">new notifications</string>
+    <string name="update_app">An update is available with new features, a faster experience,fixes,and more. It typically takes less than 1 minute.</string>
+    <string name="select_order">Select order</string>
+    <string name="you_loved_it">You loved this food</string>
+    <string name="no_one">No one make this food his favorite</string>
+    <string name="bac_orders">Back to orders</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="remove_photo">Remove photo</string>
+    <string name="gallery">Gallery</string>
+    <string name="retry_the_transaction">Retry the transaction</string>
+    <string name="oops_transaction_failed">Oops transaction failed</string>
+    <string name="transaction_status">Transaction status</string>
+    <string name="filters_are_not_available">Filters are not available for \n   Select a food type to sort the food</string>
+    <string name="you_loved">You loved this food</string>
+    <string name="more_ino">More Ino</string>
+    <string name="add_to_cart">Add to cart</string>
+     <string name="orderss">Orders</string>
+     <string name="m">M</string>
+    <string name="can">cafe</string>
+    <string name="transaction_sucessful">Transaction Successful</string>
+    <string name="settings">Settings</string>
+    <string name="pay_amount">Pay Amount</string>
+    <string name="other">Other</string>
+    <string name="tax">TAX</string>
+    <string name="select">Select</string>
+    <string name="online">Online</string>
+    <string name="pay_by_paytm">Pay Using Paytm</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="sending_code">Sending code</string>
+    <string name="resend_code">Resend code</string>
+</resources>
