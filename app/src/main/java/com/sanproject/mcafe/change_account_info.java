@@ -60,7 +60,7 @@ DatabaseReference databaseReference,databaseReference1;
                     user.setError("User name cannot be empty");
                     user.requestFocus();
                     return;
-                }else if (p.isEmpty()|| p.length()!=10){
+                }else if (p.length() != 10){
                     phone.setError("invalid Phone number  ");
                     phone.requestFocus();
                     return;
@@ -69,7 +69,15 @@ DatabaseReference databaseReference,databaseReference1;
                 shared=view.getContext().getSharedPreferences("User_Credentials", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor=shared.edit();
                 editor.putString("UserName",u);
+                editor.putString("MobileNumber",p);
                 editor.apply();
+                SharedPreferences preferences=getSharedPreferences("MyPrefs",MODE_PRIVATE);
+                SharedPreferences.Editor editor1=preferences.edit();
+                if (!p.equals(mobile))
+                    editor1.putBoolean("verify_phone",true);
+                editor1.putString("MobileNumber",p);
+                editor1.putString("UserName",u);
+                editor1.apply();
                 databaseReference1.child("User Informations").child(auth.getCurrentUser().getUid()).child("Name").setValue(u);
                     databaseReference1.child("User Informations").child(auth.getCurrentUser().getUid()).child("Mobile_number").setValue(p);
                     databaseReference1.child("User Informations").child(auth.getCurrentUser().getUid()).child("College_id").setValue(c);
@@ -89,7 +97,8 @@ DatabaseReference databaseReference,databaseReference1;
             collegeid.setText(intent.getStringExtra("CollegeId"));
             user.setText(intent.getStringExtra("User"));
             email.setText(intent.getStringExtra("Email"));
-            phone.setText(intent.getStringExtra("Mobile"));
+            mobile=intent.getStringExtra("Mobile");
+            phone.setText(mobile);
 
         } catch (Exception e) {
             e.printStackTrace();

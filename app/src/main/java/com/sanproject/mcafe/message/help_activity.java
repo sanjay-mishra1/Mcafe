@@ -15,6 +15,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -77,6 +78,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -85,8 +87,8 @@ import static com.sanproject.mcafe.constant.constants.Canteen;
 
 public class help_activity extends AppCompatActivity {
      private static final int READ_EXTERNAL_STORAGE =102 ;
-    private static final int OPEN_CAMERA =103 ;
-      TextView Edit_message;
+    private static final int CAMERA_CODE = 104;
+    TextView Edit_message;
      FirebaseAuth auth;
     public int count = 0;
     private long Total = 0;
@@ -102,6 +104,7 @@ public class help_activity extends AppCompatActivity {
    public static String Caption;
     boolean isActive;
     private long lastseen;
+    private String cameraImageFilePath;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -265,6 +268,71 @@ try {
 
     }
 
+    void openCamera2(){
+        requestPermission(this,Manifest.permission.CAMERA,CAMERA_CODE);
+        Log.e("Camera","Inside Open_camera permission");
+    }
+    private void cameraConfiguration() {
+        Intent picture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (picture.resolveActivity(getPackageManager()) != null) {
+            File photo = null;
+            try {
+                photo = createImageFile();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+            if (photo != null) {
+                Uri photoURI = FileProvider.getUriForFile(this,
+                        "com.sanproject.mcafe.provider",
+                        photo);
+                picture.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                startActivityForResult(picture, CAMERA_CODE);
+
+            }
+        }
+    }
+    private File createImageFile() throws IOException {
+        String timeStamp =
+                new SimpleDateFormat("yyyyMMdd_HHmmss",
+                        Locale.getDefault()).format(new Date());
+        String imageFileName = "IMG_" + timeStamp + "_";
+        File storageDir =
+                getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File image = File.createTempFile(
+                imageFileName,  /* prefix */
+                ".jpg",         /* suffix */
+                storageDir      /* directory */
+        );
+
+        cameraImageFilePath = image.getAbsolutePath();
+        return image;
+    }
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if(resultCode==RESULT_OK)
+//        {  String value=imageFilePath;
+//            if (link.contains(value))
+//            {
+//                showErrorSnackBar("Image already selected");
+//                return;
+//            }
+//            Log.e("Img","Img=>"+value);
+//            link.add(value);
+//            nameLink.add(""+System.currentTimeMillis());
+//            if (link.size()==1){
+//                uploadBt.setVisibility(View.VISIBLE);
+//                mainBt.setVisibility(View.VISIBLE);
+//                topBt.setVisibility(View.GONE);
+//            }
+//            adapter.notifyDataSetChanged();
+//            pagerAdapter.notifyDataSetChanged();
+//        }else{Log.e("Img","Error " );
+//            showErrorSnackBar("An error occurred");
+//        }
+//
+//    }
+//
 
 
      void setActionButton() {
@@ -322,7 +390,7 @@ try {
         findViewById(R.id.camera).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openCamera();
+                openCamera2();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     animation(false);
                 } else findViewById(R.id.card_view).setVisibility(View.INVISIBLE);
@@ -661,14 +729,8 @@ try {
     }
 
     private void openCamera() {
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            requestPermission(this,Manifest.permission.CAMERA,OPEN_CAMERA);
-            Log.e("Camera","Inside Open_camera permission");
-        }else {
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent, CHOOSE_IMAGE);
-        }
+        requestPermission(this,Manifest.permission.CAMERA,CAMERA_CODE);
+        Log.e("Camera","Inside Open_camera permission");
     }
 
     private void showImageChooser() {
@@ -689,9 +751,9 @@ try {
                     new String[]{permission},
                     value);
         } else {
-            if (value==103){Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-               startActivityForResult(intent, CHOOSE_IMAGE);
+            if (value==CAMERA_CODE){Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                cameraConfiguration();
+//               startActivityForResult(intent, CHOOSE_IMAGE);
 
             }
           else  startActivity(new Intent(this, GallerySample.class));
@@ -700,24 +762,19 @@ try {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
         switch (requestCode) {
             case READ_EXTERNAL_STORAGE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
                         startActivity(new Intent(this, GallerySample.class));
-
-
-
                  }
                 break;
             }
-            case OPEN_CAMERA:
+            case CAMERA_CODE:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    startActivityForResult(intent, CHOOSE_IMAGE);
-
+//                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//                    startActivityForResult(intent, CHOOSE_IMAGE);
+                    cameraConfiguration();
 
 
                 }
@@ -779,24 +836,37 @@ try {
     }
      public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == CHOOSE_IMAGE && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            uriProfileImage = data.getData();
-            Log.e("help", "activity result successful");
-              Log.e("Camera", uriProfileImage.toString());
-            Bitmap bitmap = null;
-            try {ImageView imageView=findViewById(R.id.messageImage);
-                bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uriProfileImage);
-                imageView.setImageBitmap(bitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
+        if (resultCode == RESULT_OK) {
+            if (data != null&& data.getData() != null&&requestCode == CHOOSE_IMAGE )
+            {
+                uriProfileImage = data.getData();
+                Log.e("help", "activity result successful");
+                Log.e("Camera", uriProfileImage.toString());
+                Bitmap bitmap = null;
+                try {ImageView imageView=findViewById(R.id.messageImage);
+                    bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uriProfileImage);
+                    imageView.setImageBitmap(bitmap);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                send_to_Image_viewer(uriProfileImage);
             }
+            else if (requestCode==CAMERA_CODE){
+                if (cameraImageFilePath!=null) {
+                    Intent intent = new Intent(this, image_zoomer.class);
+                    Log.e("Help", "inside camera code activity result");
+                    intent.putExtra("Image", cameraImageFilePath);
+                    startActivity(intent);
+                }
+            }else
+                Log.e("Help","no code found activity result resultcode->"+resultCode);
 
-            send_to_Image_viewer(uriProfileImage);
 
         } else {
-            Log.e("help", "activity result unsuccessful reqcode" + requestCode + " resultcode " + requestCode
-                    + " data ");
+            boolean result=resultCode == RESULT_OK;
+            Log.e("help", "activity result unsuccessful resultcode "+resultCode+" resultCode == RESULT_OK "+
+                    result+" reqcode" + requestCode + " resultcode " + requestCode
+                    + " data "+data);
         }
     }
 

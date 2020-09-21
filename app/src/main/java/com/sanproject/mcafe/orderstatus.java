@@ -239,15 +239,14 @@ public class orderstatus  extends AppCompatActivity {
 
     public void backtomenu(View view) {
         view.setEnabled(false);
+
         if (from.contains("Edit")){
             Intent intent=new Intent(this,MainActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
 
             startActivity(intent);
             finish();
-            //startActivity(new Intent(this,editOrder.class));
-//            finish();
-        }else{Intent intent1=getIntent();
+         }else{Intent intent1=getIntent();
             if (intent1.getStringExtra("Message").contains("Success") && intent1.getStringExtra("From").contains("OrderFood"))
             {
                 empty_cart();

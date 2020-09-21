@@ -68,9 +68,9 @@
             android:parentActivityName=".Final_Food_selelction"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.sanjay.tabcard.MainActivity" />
+<!--            <meta-data-->
+<!--                android:name="android.support.PARENT_ACTIVITY"-->
+<!--                android:value="com.example.sanjay.tabcard.MainActivity" />-->
         </activity>
 
         <meta-data
@@ -107,7 +107,6 @@
 
             android:screenOrientation="portrait"/>
         <activity android:name=".carts.cartFragments"
-            android:theme="@style/AppTheme_cart"
 
             android:screenOrientation="portrait"/>
         <activity
@@ -145,13 +144,25 @@
         <activity android:name=".account_settings"
             android:screenOrientation="portrait"
             android:label="Settings"
-
-
             />
-        <activity android:name=".selectcanteen" />
-        <activity android:name=".update.webview" />
-        <activity android:name=".payment_wallets.PayUWalletActivity" />
-        <activity android:name=".payment_wallets.RazorpayPayment" />
+        <activity android:name=".selectcanteen"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".update.webview"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".payment_wallets.PayUWalletActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".payment_wallets.RazorpayPayment"
+            android:screenOrientation="portrait"/>
+        <!-- For storing image -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 

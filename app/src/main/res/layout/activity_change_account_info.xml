@@ -26,9 +26,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="82dp"
         android:layout_marginStart="82dp"
+        android:inputType="textPersonName|textCapWords"
         android:layout_marginTop="112dp"
         android:text="User"
-        android:textSize="17dp" />
+         />
 
     <EditText
         android:id="@+id/Phone_id"
@@ -38,8 +39,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="221dp"
         android:layout_marginLeft="76dp"
-        android:text="Phone"
-        android:textSize="17dp"
+        android:inputType="date"
+        android:drawableStart="@drawable/mobile_prefix"
+        android:maxLength="10"
+        android:drawablePadding="2dp"
         android:layout_alignParentRight="true" />
 
     <EditText
@@ -75,6 +78,7 @@
         android:layout_below="@+id/emailid_id"
         android:layout_marginTop="25dp"
         android:text="CollegeId"
+        android:inputType="textPersonName|textCapCharacters"
         android:textSize="17dp"
         android:visibility="gone" />
 
@@ -96,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/imageView3"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="238dp"
         app:srcCompat="@drawable/phone"
         android:layout_alignRight="@+id/imageView3" />
 

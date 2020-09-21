@@ -8,7 +8,6 @@
 
     <ImageView
         android:id="@+id/imageId"
-        android:src="@drawable/ic_50_percent"
         android:layout_width="match_parent"
          android:layout_height="match_parent"
         android:layout_centerVertical="true" />
@@ -73,7 +72,7 @@
                 android:layout_marginEnd="75dp"
                 android:layout_marginRight="75dp"
                  android:hint="@string/add_a_caption"
-                android:inputType="textMultiLine"
+                android:inputType="textMultiLine|textCapSentences"
                 android:maxHeight="100dp"
                 android:maxLines="4"
                 android:paddingLeft="10dp"

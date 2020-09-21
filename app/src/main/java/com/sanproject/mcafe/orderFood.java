@@ -80,7 +80,6 @@ private FirebaseAuth auth;
     private String DeliveryTime="";
     private Dialog progressDialog;
     private String Type="";
-    private MobileVerificationFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,10 +123,9 @@ findViewById(R.id.backpopupweight).setOnClickListener(new View.OnClickListener()
         fifty.setOnClickListener(new View.OnClickListener() {
      @Override
     public void onClick(View view) {
-         if (!Times.isEmpty() && Times != null) {
+         if (Times != null&&!Times.isEmpty()) {
              String Time_Instant = DateFormat.getDateTimeInstance().format(new Date());
              String OrderNo = getUOrderNumber();
-
              try {
                  for (int i = 0; i < records; i++) {
                      String Foodname = names.get(i);
@@ -149,7 +147,7 @@ findViewById(R.id.backpopupweight).setOnClickListener(new View.OnClickListener()
              }
              SharedPreferences preferences=getSharedPreferences(MYPREFERENCES,MODE_PRIVATE);
              if (preferences.getBoolean("verify_phone",false)){
-                 fragment = new MobileVerificationFragment();
+                 MobileVerificationFragment fragment = new MobileVerificationFragment();
                  Bundle intent=new Bundle();
                  intent.putString("Order", OrderNo);
                  intent.putString("TodaysTime", Time_Instant);
@@ -188,7 +186,6 @@ findViewById(R.id.backpopupweight).setOnClickListener(new View.OnClickListener()
                  intent.putExtra("Tax", Tax);
                  intent.putExtra("From", "OrderFood");
                  intent.putExtra("OtherPayment", Other);
-
                  try {
                      intent.putExtra("Image1", img.get(1));
                      intent.putExtra("Image2", img.get(2));
@@ -209,23 +206,9 @@ findViewById(R.id.backpopupweight).setOnClickListener(new View.OnClickListener()
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-      try {
-          if (fragment!=null)
-              fragment.dismiss();
-      }catch (Exception ignored){}
-    }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        try {
-            if (fragment!=null)
-                fragment.dismiss();
-        }catch (Exception ignored){}
-    }
+
+
 
     void setCheckFor_Lunch() {
         Log.e("Lunch time","set check for lunch");

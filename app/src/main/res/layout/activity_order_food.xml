@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f1efef"
     android:layout_height="wrap_content"
     tools:context=".orderFood">
     <com.google.android.material.appbar.AppBarLayout
@@ -47,15 +48,15 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@id/pay50"
+        android:background="#f1efef"
         android:layout_below="@+id/appBarLayout">
 
         <RelativeLayout
             android:id="@+id/relative"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_height="match_parent"
             android:background="#f1efef">
 
 

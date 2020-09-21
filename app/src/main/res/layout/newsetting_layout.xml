@@ -217,7 +217,6 @@
                 android:drawablePadding="12dp"
                 android:drawableRight="@drawable/arrow_right"
                 android:gravity="center"
-                android:text="s"
                 android:textAlignment="viewStart"
                 android:textColor="#000"
                 android:textSize="20dp"

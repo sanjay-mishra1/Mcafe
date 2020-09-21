@@ -1,5 +1,6 @@
 package com.sanproject.mcafe;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -51,7 +52,11 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
     View otpView;
     boolean isOtpVisible=false;
     private EditText mobileText;
-
+    public MobileVerificationFragment(){}
+    Dialog mobileViewDialog;
+    public MobileVerificationFragment(Dialog mobileViewDialog){
+        this.mobileViewDialog=mobileViewDialog;
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -136,7 +141,7 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
         startIntent.putString("Status",intent.getString("Status"));
         startIntent.putString("Total_Amount",intent.getString("Total_Amount"));
         startIntent.putString("Pay_Amount",intent.getString("Pay_Amount"));
-        startIntent.putString("UId", intent.getString(uid));
+        startIntent.putString("UId", (uid));
         startIntent.putString( "From",intent.getString("From"));
         startIntent.putString("Total_Food",intent.getString("Total_Food"));
         startIntent.putString("Address",intent.getString("Address"));
@@ -149,7 +154,7 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
             startIntent.putString( "Image1",  intent.getString("Image1" ));
             startIntent.putString("Image2",  intent.getString("Image2"));
             startIntent.putString( "Image3", intent.getString("Image3" ));
-            MobileVerificationFragment fragment=new MobileVerificationFragment();
+            MobileVerificationFragment fragment=new MobileVerificationFragment(getDialog());
             fragment.setArguments(startIntent);
             fragment.showNow(getActivity().getSupportFragmentManager(), "Verify OTP");
     }catch (Exception e){e.printStackTrace();}
@@ -166,15 +171,16 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
         }
     }
     private void signInWithCredential(PhoneAuthCredential credential) {
+        progressBar.setVisibility(View.VISIBLE);
+        signinBt.setText("Verifying");
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                      try {
                          if (task.isSuccessful()) {
-                             progressBar.setVisibility(View.VISIBLE);
                              signinBt.setEnabled(false);
-                             signinBt.setText("Verifying");
+
                              checkUser();
                          } else {
                              Toast.makeText(getActivity(), "Invalid code", Toast.LENGTH_LONG).show();
@@ -210,6 +216,11 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
               editor.putString("MobileNumber", phonenumber.replace("+91",""));
               editor.remove("verify_phone");
               editor.apply();
+              SharedPreferences preferences=getActivity().getSharedPreferences("User_Credentials",Context.MODE_PRIVATE);
+              SharedPreferences.Editor editor1=preferences.edit();
+              editor1.putString("MobileNumber",phonenumber.replace("+91",""));
+              editor1.remove("verify_phone");
+              editor1.apply();
               updateCredentials();
           }catch (Exception e){}
                 } else {
@@ -241,7 +252,7 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
             startIntent.putExtra("Status",intent.getString("Status"));
             startIntent.putExtra("Total_Amount",intent.getString("Total_Amount"));
             startIntent.putExtra("Pay_Amount",intent.getString("Pay_Amount"));
-            startIntent.putExtra("UId", intent.getString(uid));
+            startIntent.putExtra("UId", (uid));
             startIntent.putExtra( "From",intent.getString("From"));
             startIntent.putExtra("Total_Food",intent.getString("Total_Food"));
             startIntent.putExtra("Address",intent.getString("Address"));
@@ -255,6 +266,7 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
                 startIntent.putExtra( "Image3", intent.getString("Image3" ));
                 startActivity(startIntent);
                 dismiss();
+                mobileViewDialog.dismiss();
             }catch (Exception NullPointerException){NullPointerException.printStackTrace();}
         }catch (Exception e){e.printStackTrace();}
     }
@@ -295,7 +307,7 @@ public class MobileVerificationFragment extends BottomSheetDialogFragment {
                 editText.setText(code);
                 if (!isDetached()|| !isVisible())
                     verifyCode(code);
-            }else {  // TODO: 06/04/2020 Add firebase analytics event here.
+            }else {
                 //    showAlertDialog("Unable to send the code. Please check your mobile number.\nIf problem persists try interchanging the sim slots of your mobile.", false);
                     ///here error handler required
                 signinBt.setEnabled(false);

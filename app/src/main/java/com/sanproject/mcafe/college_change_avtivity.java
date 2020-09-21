@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -60,7 +59,12 @@ public class college_change_avtivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String c=collegeid.getText().toString().trim();
-                auth.getCurrentUser().updateEmail(email.getText().toString().trim());
+                if(c.isEmpty())
+                {
+                    Toast.makeText(college_change_avtivity.this,"Enter college id",Toast.LENGTH_LONG).show();
+                    return;
+                }
+//                auth.getCurrentUser().updateEmail(email.getText().toString().trim());
                 databaseReference1.child("User Informations").child(auth.getCurrentUser().getUid()).child("College_id").setValue(c);
                 Toast.makeText(college_change_avtivity.this,"Details Modified",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(college_change_avtivity.this,MainActivity.class);

@@ -158,6 +158,9 @@ public class editOrder extends AppCompatActivity {
         findViewById(R.id.backpopupweight).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (isTaskRoot())
+                {   startActivity(new Intent(editOrder.this,MainActivity.class));
+                }
                 finish();
             }
         });
